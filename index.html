@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Productivity Dashboard</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<!-- Username Modal -->
+<div id="nameModal" class="modal">
+  <div class="modal-box">
+    <h2>Login</h2>
+
+    <input id="usernameInput" placeholder="Username">
+    <input id="passwordInput" type="password" placeholder="Password">
+
+    <button onclick="login()">Login</button>
+    <button onclick="signup()">Signup</button>
+
+    <p id="loginMsg" style="color:red;margin-top:10px"></p>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="header">
+    <div class="topbar">
+      <div class="greet" id="greet">Good Evening</div>
+      <button onclick="toggleTheme()" id="themeBtn">🌙</button>
+    </div>
+    <div class="clock" id="clock">00:00:00</div>
+  </div>
+
+  <div class="progress-card">
+    <h3>Today's Progress</h3>
+    <div class="progress-bar">
+      <div id="progressFill"></div>
+    </div>
+    <p id="progressText">0% completed</p>
+  </div>
+
+  <div class="grid">
+
+    <div class="card weather">
+      <h3>Weather</h3>
+      <div id="weather">Loading...</div>
+    </div>
+
+    <div class="card">
+      <h3>Daily Quote</h3>
+      <div class="quote" id="quote">Loading quote...</div>
+      <button onclick="newQuote()">New Quote</button>
+    </div>
+
+    <div class="card todo">
+      <h3>To Do</h3>
+      <input id="task" placeholder="Add a task" />
+      <button onclick="addTask()">Add</button>
+      <ul id="list"></ul>
+    </div>
+
+    <div class="card">
+      <h3>Focus Timer</h3>
+      <div class="timer" id="timer">25:00</div>
+      <div class="controls">
+        <button onclick="startTimer()">Start</button>
+        <button onclick="stopTimer()">Stop</button>
+        <button onclick="resetTimer()">Reset</button>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="history">
+    <h3>Weekly Activity</h3>
+    <div id="historyList"></div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
